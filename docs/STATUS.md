@@ -2,7 +2,11 @@
 
 ## Vérifié sur Lovecaft lors de l'initialisation
 
-- Accès SSH au dépôt GitHub fonctionnel ; dépôt initialement vide et public.
+- Accès SSH en lecture fonctionnel ; dépôt initialement vide et public.
+- Première version publiée sur `main`. Sur Lovecaft, la clé SSH est une clé de déploiement
+  sans droit d'écriture : les pushes utilisent donc HTTPS via le compte GitHub CLI déjà connecté.
+  Cette configuration est locale à `.git/config`, sans secret versionné. Les lectures restent en SSH.
+  Sur Denise, le droit de push de sa propre clé reste à vérifier.
 - Windows 11 Famille, version système 10.0.22631.
 - NVIDIA GeForce RTX 5070 détectée.
 - Git, GitHub CLI et winget disponibles.
