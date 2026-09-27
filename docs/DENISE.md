@@ -42,10 +42,17 @@ Cette procédure utilise la [CLI officielle Tailscale](https://tailscale.com/doc
 ## 3. Associer les machines
 
 - Pour le premier essai, connecter Denise au même réseau domestique que Lovecaft.
-- Ouvrir Moonlight ; sélectionner Lovecaft s'il apparaît, sinon ajouter son adresse LAN manuellement.
-- Saisir le PIN affiché par Moonlight dans la page d'association de Sunshine sur Lovecaft.
-- Cette page s'ouvre uniquement sur le PC à `https://localhost:47990`.
-  Les identifiants administrateur restent sur Lovecaft ; voir son guide pour les récupérer.
+- Ouvrir **Finder → Applications → Moonlight**, ou utiliser Spotlight (`⌘ Espace`).
+- Sélectionner Lovecaft s'il apparaît. Sinon, cliquer sur **+** et ajouter son adresse LAN
+  ou son adresse Tailscale si les deux machines sont connectées au même réseau Tailscale.
+  Le nom configuré du PC est `lovecaft`, sans « r ».
+- Cliquer sur le PC dans Moonlight pour afficher le PIN d'association.
+- Sur le PC, ouvrir `https://localhost:47990` et se connecter à Sunshine.
+  L'utilisateur est `lovecaft` ; le mot de passe est conservé chiffré sur le PC.
+  Voir [le guide Lovecaft](LOVECAFT.md#installation-actuelle-et-accès-administrateur)
+  pour le copier dans le presse-papiers. La commande ne l'affiche pas : coller avec `Ctrl+V`.
+- Dans Sunshine, ouvrir manuellement l'onglet **PIN** : aucune fenêtre ne s'ouvre automatiquement.
+  Saisir les quatre chiffres affichés par Moonlight et, si demandé, le nom `Denise`, puis valider.
 - Lancer Desktop/Bureau et tester image, son, clavier et souris.
 - Pour l'accès extérieur, ajouter l'adresse Tailscale de Lovecaft à Moonlight si nécessaire.
   Consulter cette adresse dans Tailscale ; ne pas la committer.
