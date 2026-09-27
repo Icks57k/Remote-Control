@@ -25,6 +25,20 @@ puis utiliser `git pull --ff-only`.
 Sunshine n'est pas nécessaire sur Denise. Homebrew n'est pas un prérequis.
 Lovecaft est déjà installé et connecté : ne pas attendre une nouvelle installation côté PC.
 
+### Si le bouton de connexion Tailscale ne fait rien
+
+Vérifier `tailscale status` et `systemextensionsctl list`. Si l'extension Tailscale
+est activée et autorisée mais que le compte est déconnecté (`Logged out.`), lancer :
+
+```sh
+tailscale login
+```
+
+Ouvrir le lien de connexion affiché dans le navigateur, puis se connecter au même compte
+que sur Lovecaft. Ne pas publier ce lien dans Git. Contrôler ensuite `tailscale status` :
+obtenir un lien ne prouve pas que la connexion est terminée.
+Cette procédure utilise la [CLI officielle Tailscale](https://tailscale.com/docs/reference/tailscale-cli).
+
 ## 3. Associer les machines
 
 - Pour le premier essai, connecter Denise au même réseau domestique que Lovecaft.

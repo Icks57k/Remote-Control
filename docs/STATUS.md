@@ -11,8 +11,11 @@
   officielle ; signature vérifiée avec `codesign --verify --deep --strict`, application ouverte.
 - Installateur autonome Tailscale **1.102.4** téléchargé depuis `pkgs.tailscale.com`
   dans `.local/`, empreinte SHA-256 conforme au manifeste Homebrew,
-  signature Tailscale Inc. et notarisation Apple vérifiées. Installateur ouvert ;
-  installation, autorisations macOS et connexion au compte encore à terminer par l'utilisateur.
+  signature Tailscale Inc. et notarisation Apple vérifiées. Installation terminée :
+  application **1.102.4** présente et extension réseau activée et autorisée.
+- Le bouton « Sign in to your network » ne produisait aucun effet visible pour l'utilisateur.
+  La CLI répondait `Logged out.` ; `tailscale login` a obtenu un lien de connexion,
+  ouvert dans le navigateur par défaut. Authentification de l'utilisateur encore à confirmer.
 - Aucun appairage Moonlight ni test réseau ou streaming effectué sur Denise.
   Le profil 1080p/60/15 Mbit/s reste à appliquer et vérifier dans Moonlight.
 
@@ -74,8 +77,8 @@ Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 
 ## Prochaine action
 
-Sur **Denise**, terminer l'installateur Tailscale ouvert, autoriser ses composants réseau
-dans macOS et connecter le même compte Tailscale que sur Lovecaft. Moonlight est installé.
+Sur **Denise**, terminer la connexion Tailscale dans le navigateur avec le même compte
+que sur Lovecaft. Les deux applications sont installées et l'extension réseau est autorisée.
 Relever l'adresse de Lovecaft dans Tailscale, sans la publier dans Git.
 L'association Moonlight nécessite de saisir son PIN dans Sunshine sur Lovecaft : prévoir
 ce premier appairage avant de quitter le domicile. L'interface Sunshine est accessible
