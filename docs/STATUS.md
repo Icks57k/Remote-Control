@@ -1,5 +1,21 @@
 # État du projet
 
+## État actuel de Denise — 27 septembre 2026
+
+- Dépôt cloné en HTTPS sur `main`. Authentification SSH GitHub fonctionnelle ;
+  URL de push configurée en SSH localement, essai `git push --dry-run` réussi.
+- MacBook Air, identifiant Mac16,13, Apple M4, 16 Go de mémoire ;
+  macOS 26.6.2 (25G83), architecture arm64 vérifiés sur ce poste.
+- Moonlight et Tailscale absents des dossiers Applications habituels avant intervention.
+- Moonlight **6.1.0** installé dans `/Applications` via Homebrew depuis sa distribution
+  officielle ; signature vérifiée avec `codesign --verify --deep --strict`, application ouverte.
+- Installateur autonome Tailscale **1.102.4** téléchargé depuis `pkgs.tailscale.com`
+  dans `.local/`, empreinte SHA-256 conforme au manifeste Homebrew,
+  signature Tailscale Inc. et notarisation Apple vérifiées. Installateur ouvert ;
+  installation, autorisations macOS et connexion au compte encore à terminer par l'utilisateur.
+- Aucun appairage Moonlight ni test réseau ou streaming effectué sur Denise.
+  Le profil 1080p/60/15 Mbit/s reste à appliquer et vérifier dans Moonlight.
+
 ## État actuel de Lovecaft — 27 septembre 2026
 
 - Sunshine **2026.914.233613** et Tailscale **1.102.4** installés via winget,
@@ -42,8 +58,8 @@
 - Veille du PC configurée après 900 secondes (15 minutes) sur secteur ; à adapter avant accès distant.
 - Aucun logiciel installé et aucun réglage réseau ou d'alimentation modifié par cette initialisation.
 
-Le matériel de Denise, l'iPhone et les connexions fibre/5G sont renseignés par l'utilisateur.
-Ils n'ont pas encore été inspectés sur place.
+L'iPhone et les connexions fibre/5G sont renseignés par l'utilisateur et restent à tester.
+Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 
 ## Étapes
 
@@ -58,8 +74,8 @@ Ils n'ont pas encore été inspectés sur place.
 
 ## Prochaine action
 
-Passer sur **Denise**, cloner le dépôt ou effectuer `git pull --ff-only`, puis suivre docs/DENISE.md.
-Installer Moonlight et Tailscale, et connecter le même compte Tailscale que sur Lovecaft.
+Sur **Denise**, terminer l'installateur Tailscale ouvert, autoriser ses composants réseau
+dans macOS et connecter le même compte Tailscale que sur Lovecaft. Moonlight est installé.
 Relever l'adresse de Lovecaft dans Tailscale, sans la publier dans Git.
 L'association Moonlight nécessite de saisir son PIN dans Sunshine sur Lovecaft : prévoir
 ce premier appairage avant de quitter le domicile. L'interface Sunshine est accessible
@@ -68,5 +84,5 @@ uniquement depuis Lovecaft ; aucune administration via son adresse Tailscale n'e
 ## Vérifications des scripts
 
 - Windows : analyse syntaxique PowerShell réussie et diagnostic exécuté avec succès sur Lovecaft.
-- macOS : syntaxe vérifiée avec `bash -n` via Git Bash ; exécution réelle non testée, nécessite Denise.
+- macOS : `bash -n` et exécution réelle de `scripts/macos/diagnose.sh` réussis sur Denise.
 - Aucun test de streaming effectué à ce stade.
