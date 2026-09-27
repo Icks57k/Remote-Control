@@ -15,8 +15,11 @@
   application **1.102.4** présente et extension réseau activée et autorisée.
 - Le bouton « Sign in to your network » ne produisait aucun effet visible pour l'utilisateur.
   La CLI répondait `Logged out.` ; `tailscale login` a obtenu un lien de connexion,
-  ouvert dans le navigateur par défaut. Authentification de l'utilisateur encore à confirmer.
-- Aucun appairage Moonlight ni test réseau ou streaming effectué sur Denise.
+  ouvert dans le navigateur par défaut. Connexion terminée par l'utilisateur ;
+  état `Running` vérifié et Lovecaft présent et en ligne dans le même réseau.
+- Ping Tailscale vers Lovecaft réussi avec trajet direct ; ports TCP Sunshine
+  47989, 47984 et 48010 accessibles depuis Denise. Cela ne valide pas encore le streaming.
+- Aucun appairage Moonlight ni test de streaming effectué sur Denise.
   Le profil 1080p/60/15 Mbit/s reste à appliquer et vérifier dans Moonlight.
 
 ## État actuel de Lovecaft — 27 septembre 2026
@@ -69,7 +72,7 @@ Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 - [x] Créer les guides, les règles de reprise et les scripts de diagnostic.
 - [x] Installer et configurer Sunshine sur Lovecaft.
 - [x] Installer Tailscale et connecter Lovecaft au compte de l'utilisateur.
-- [ ] Installer Moonlight et Tailscale sur Denise ; connecter le même réseau Tailscale.
+- [x] Installer Moonlight et Tailscale sur Denise ; connecter le même réseau Tailscale.
 - [ ] Associer Moonlight à Sunshine et valider une session sur le réseau local.
 - [ ] Valider une liaison Tailscale directe et une session via le partage 5G.
 - [ ] Valider écran éteint, veille désactivée et reprise après redémarrage.
@@ -77,8 +80,8 @@ Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 
 ## Prochaine action
 
-Sur **Denise**, terminer la connexion Tailscale dans le navigateur avec le même compte
-que sur Lovecaft. Les deux applications sont installées et l'extension réseau est autorisée.
+Sur **Denise**, associer Moonlight à Sunshine puis tester Desktop/Bureau.
+Les deux applications sont installées, l'extension réseau est autorisée et Tailscale est connecté.
 Relever l'adresse de Lovecaft dans Tailscale, sans la publier dans Git.
 L'association Moonlight nécessite de saisir son PIN dans Sunshine sur Lovecaft : prévoir
 ce premier appairage avant de quitter le domicile. L'interface Sunshine est accessible
