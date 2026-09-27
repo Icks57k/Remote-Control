@@ -1,6 +1,34 @@
 # État du projet
 
-## Vérifié sur Lovecaft lors de l'initialisation
+## État actuel de Lovecaft — 27 septembre 2026
+
+- Sunshine **2026.914.233613** et Tailscale **1.102.4** installés via winget,
+  depuis leurs installateurs officiels avec vérification des empreintes par winget.
+- Services `SunshineService` et `Tailscale` actifs, démarrage automatique.
+- Tailscale connecté par l'utilisateur ; appareil `lovecaft` en ligne, mode sans utilisateur
+  (`ForceDaemon`) actif, routes de sous-réseau non acceptées et serveur SSH désactivé.
+- Diagnostic Tailscale : UDP, IPv4 et IPv6 disponibles. Le trajet direct vers Denise reste à tester.
+- Liaison Ethernet active à 1 Gbit/s.
+- Veille automatique sur secteur désactivée (ancien délai : 15 minutes).
+  Extinction de l'écran et réglage sur batterie conservés.
+- Sunshine annonce **Lovecaft**, interface française, UPnP désactivé,
+  administration limitée au PC (`origin_web_ui_allowed = pc`).
+- Compte administrateur Sunshine `lovecaft` créé avec mot de passe aléatoire.
+  Copie chiffrée par Windows DPAPI dans `.local/sunshine-admin.credential.xml`, hors Git.
+  Voir docs/LOVECAFT.md pour l'utilisation depuis la session Windows actuelle.
+- Encodeurs H.264, HEVC et AV1 NVIDIA détectés lors du diagnostic de démarrage.
+  Écran actuel détecté en 2560 × 1440, environ 144 Hz, SDR.
+- Entrées Desktop et Steam Big Picture présentes. Le service GameStream répond localement
+  sous le nom Lovecaft ; aucun client Moonlight n'est encore associé.
+- API d'administration accessible avec le compte créé ; sans identifiants, réponse HTTP 401.
+- Pare-feu Windows actif sur tous les profils. Les règles de l'installateur autorisent
+  l'exécutable Sunshine ; aucune redirection de port sur la box ajoutée.
+- Aucun pilote de manette virtuelle installé. Sélection `gamepad_driver = vigembus` enregistrée,
+  sans installation de pilote ni achat de licence. Premier essai prévu au clavier/souris ;
+  la manette demandera une préparation supplémentaire si nécessaire.
+- Sunshine a été redémarré et sa configuration relue avec succès. Le PC n'a pas été redémarré.
+
+## Historique de l'initialisation du dépôt
 
 - Accès SSH en lecture fonctionnel ; dépôt initialement vide et public.
 - Première version publiée sur `main`. Sur Lovecaft, la clé SSH est une clé de déploiement
@@ -20,8 +48,8 @@ Ils n'ont pas encore été inspectés sur place.
 ## Étapes
 
 - [x] Créer les guides, les règles de reprise et les scripts de diagnostic.
-- [ ] Installer et configurer Sunshine sur Lovecaft.
-- [ ] Installer Tailscale et connecter Lovecaft au compte de l'utilisateur.
+- [x] Installer et configurer Sunshine sur Lovecaft.
+- [x] Installer Tailscale et connecter Lovecaft au compte de l'utilisateur.
 - [ ] Installer Moonlight et Tailscale sur Denise ; connecter le même réseau Tailscale.
 - [ ] Associer Moonlight à Sunshine et valider une session sur le réseau local.
 - [ ] Valider une liaison Tailscale directe et une session via le partage 5G.
@@ -30,9 +58,12 @@ Ils n'ont pas encore été inspectés sur place.
 
 ## Prochaine action
 
-Sur Lovecaft : suivre docs/LOVECAFT.md, installer les versions stables de Sunshine et Tailscale,
-puis faire effectuer les connexions et la création du mot de passe Sunshine par l'utilisateur.
-Sur Denise, l'installation du client peut avancer indépendamment via docs/DENISE.md.
+Passer sur **Denise**, cloner le dépôt ou effectuer `git pull --ff-only`, puis suivre docs/DENISE.md.
+Installer Moonlight et Tailscale, et connecter le même compte Tailscale que sur Lovecaft.
+Relever l'adresse de Lovecaft dans Tailscale, sans la publier dans Git.
+L'association Moonlight nécessite de saisir son PIN dans Sunshine sur Lovecaft : prévoir
+ce premier appairage avant de quitter le domicile. L'interface Sunshine est accessible
+uniquement depuis Lovecaft ; aucune administration via son adresse Tailscale n'est activée.
 
 ## Vérifications des scripts
 

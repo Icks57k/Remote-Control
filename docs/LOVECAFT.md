@@ -1,5 +1,31 @@
 # Lovecaft : PC hôte
 
+## Installation actuelle et accès administrateur
+
+Sunshine et Tailscale sont installés et configurés. Consulter [STATUS.md](STATUS.md)
+avant de réexécuter l'installation ci-dessous.
+
+Ouvrir `https://localhost:47990` **sur Lovecaft**. Identifiant Sunshine : `lovecaft`.
+Le mot de passe généré est conservé chiffré par Windows dans
+`.local/sunshine-admin.credential.xml`, accessible depuis le compte Windows qui l'a créé.
+Depuis la racine du dépôt, cette commande copie le mot de passe dans le presse-papiers
+sans l'afficher dans le terminal :
+
+```powershell
+(Import-Clixml .local/sunshine-admin.credential.xml).GetNetworkCredential().Password | Set-Clipboard
+```
+
+Coller dans le formulaire Sunshine. Vider ensuite le presse-papiers avec `Set-Clipboard -Value ''`.
+Ce fichier ne se synchronise pas via Git et ne se déchiffre pas sur Denise.
+L'administration est volontairement limitée à localhost ; cela n'empêche pas le streaming.
+
+Les réglages d'alimentation d'origine sont relevés dans `.local/power-before.txt`.
+Pour rétablir le délai de veille initial sur secteur, exécuter `powercfg /change standby-timeout-ac 15`.
+Laisser la veille désactivée pendant les périodes où l'accès distant doit rester disponible.
+
+Le premier usage vise clavier/souris. Aucun pilote de manette virtuelle n'a été installé.
+Ne pas confondre le choix `vigembus` enregistré dans Sunshine avec la présence de ce pilote.
+
 ## 1. Diagnostic
 
 Depuis la racine du dépôt, dans PowerShell :

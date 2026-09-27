@@ -13,6 +13,9 @@ Write-Output '=== Outils ==='
 foreach ($tool in @('git', 'winget', 'tailscale', 'nvidia-smi')) {
     $command = Get-Command $tool -ErrorAction SilentlyContinue
     if ($command) { Write-Output ('{0}: {1}' -f $tool, $command.Source) }
+    elseif ($tool -eq 'tailscale' -and (Test-Path -LiteralPath "$env:ProgramFiles\Tailscale\tailscale.exe")) {
+        Write-Output ('tailscale: {0}\Tailscale\tailscale.exe (hors PATH de cette session)' -f $env:ProgramFiles)
+    }
     else { Write-Output ('{0}: absent du PATH' -f $tool) }
 }
 

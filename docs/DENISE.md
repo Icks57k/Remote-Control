@@ -23,12 +23,15 @@ puis utiliser `git pull --ff-only`.
 5. Noter les versions réellement installées dans STATUS.md.
 
 Sunshine n'est pas nécessaire sur Denise. Homebrew n'est pas un prérequis.
+Lovecaft est déjà installé et connecté : ne pas attendre une nouvelle installation côté PC.
 
 ## 3. Associer les machines
 
 - Pour le premier essai, connecter Denise au même réseau domestique que Lovecaft.
 - Ouvrir Moonlight ; sélectionner Lovecaft s'il apparaît, sinon ajouter son adresse LAN manuellement.
 - Saisir le PIN affiché par Moonlight dans la page d'association de Sunshine sur Lovecaft.
+- Cette page s'ouvre uniquement sur le PC à `https://localhost:47990`.
+  Les identifiants administrateur restent sur Lovecaft ; voir son guide pour les récupérer.
 - Lancer Desktop/Bureau et tester image, son, clavier et souris.
 - Pour l'accès extérieur, ajouter l'adresse Tailscale de Lovecaft à Moonlight si nécessaire.
   Consulter cette adresse dans Tailscale ; ne pas la committer.
