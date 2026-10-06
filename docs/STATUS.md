@@ -33,6 +33,13 @@
   SendInput et nécessitent Raw Input ; piste de compatibilité à confirmer ici,
   sans conclusion sur l’anti-triche ni garantie de correction par un pilote.
   Source : https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html
+- L’utilisateur prévoit de reprendre côté Lovecaft pour la piste **Virtual HID Driver**,
+  au clavier/souris sans manette. Guide de reprise ajouté dans docs/LOVECAFT.md :
+  inspection, versions compatibles, licence, réglage d’entrée et validation réelle.
+- Aucun pilote téléchargé/installé, aucune licence achetée/activée et aucun réglage
+  Sunshine modifié pendant cette session sur Denise. Virtual HID reste non testé.
+- Session documentaire : diff relu et `git diff --check` réussi ; aucun script modifié
+  et aucun diagnostic Windows exécuté depuis le Mac.
 - Confirmer ensuite le réseau utilisé, le son et le profil Moonlight.
 
 ## État actuel de Denise — 27 septembre 2026
@@ -126,17 +133,22 @@ Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 
 ## Prochaine action
 
-La prise de contrôle du bureau en déplacement est confirmée, mais les commandes dans
-Aion 2 bloquent, sauf le mouvement de caméra. Le Bloc-notes répond même lorsque
-le jeu est ouvert, et revenir au premier plan dans le jeu ne corrige rien.
-Version Steam globale confirmée. Essayer l’entrée Steam de Moonlight, puis
-rechercher une solution officiellement prise en charge si le blocage persiste ;
-aucun correctif validé à ce stade. Vérifier ensuite le son, le profil Moonlight et la qualité sur
-15 à 30 minutes. Confirmer si le Mac utilise le partage 5G de l’iPhone.
-Le profil prévu reste 1080p/60/15 Mbit/s SDR. Les essais détaillés sur le réseau
-domestique, écran éteint et après redémarrage restent à organiser selon docs/VALIDATION.md.
-L'appairage est réalisé ; ne pas le recommencer sauf si Moonlight le demande.
-L'interface Sunshine reste accessible uniquement depuis Lovecaft.
+Reprendre sur **Lovecaft** avec le guide
+[Reprise Aion 2 et Virtual HID](LOVECAFT.md#reprise-prioritaire--aion-2-et-virtual-hid--6-octobre-2026).
+Inspecter l’existant avant installation, vérifier une version stable compatible du pilote
+et les conditions de licence, puis préparer Virtual HID pour le **clavier et la souris**.
+Le jeu est la version **globale Steam**. La piste est documentée, sans garantie de correction
+ni validation en jeu ; aucune installation n’a encore été effectuée.
+
+Le bureau fonctionne à distance, mais Aion 2 ignore les touches et les clics même après
+retour au premier plan. Le Bloc-notes répond avec le jeu ouvert. Le résultat de l’essai
+via l’entrée Steam de Moonlight reste inconnu. Ne pas recommencer l’appairage sauf demande
+de Moonlight ; garder l’administration Sunshine limitée à Lovecaft.
+
+Après intervention, tester depuis Denise le bureau, puis les commandes dans Aion 2.
+Relever ensuite le son, le profil et la qualité sur 15 à 30 minutes, en précisant le réseau
+utilisé. Le profil prévu reste 1080p/60/15 Mbit/s SDR. Les validations détaillées en LAN,
+via partage 5G, écran éteint et après redémarrage restent à compléter selon VALIDATION.md.
 
 ## Vérifications des scripts
 

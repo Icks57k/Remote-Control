@@ -26,6 +26,83 @@ Laisser la veille désactivée pendant les périodes où l'accès distant doit r
 Le premier usage vise clavier/souris. Aucun pilote de manette virtuelle n'a été installé.
 Ne pas confondre le choix `vigembus` enregistré dans Sunshine avec la présence de ce pilote.
 
+## Reprise prioritaire : Aion 2 et Virtual HID — 6 octobre 2026
+
+L’utilisateur passe côté PC pour préparer cette piste. Cette procédure est rédigée
+sur Denise ; aucune installation ni validation Windows de Virtual HID n’a été faite.
+Le jeu est **Aion 2, version globale lancée via Steam**, joué au **clavier et à la souris**.
+Aucune manette n’est demandée.
+
+### Résultats déjà obtenus
+
+- Bureau Windows accessible depuis Denise par Moonlight, clavier et clics fonctionnels.
+- Tailscale direct, 34 ms sur une mesure ; ports Sunshine accessibles.
+- Aion 2 se lance et la caméra bouge, mais touches et clics ne répondent pas.
+- Ctrl+Échap ouvre Démarrer ; saisie et clics dans le Bloc-notes fonctionnent même
+  avec Aion 2 ouvert. Revenir au jeu par la barre des tâches ne corrige pas le blocage.
+- Alt+Tab revenait au Mac : la capture des raccourcis système Moonlight est désactivée.
+  Ce constat est distinct du blocage des touches ordinaires et des clics dans Aion 2.
+- L’essai via l’entrée Steam de Moonlight a été proposé, mais son résultat n’est pas connu.
+  Desktop et Steam utilisent tous deux Sunshine/Moonlight, pas Steam Remote Play.
+
+Ces tests orientent vers une incompatibilité des entrées avec le jeu. Ils ne prouvent
+ni un blocage par l’anti-triche ni que Virtual HID résoudra le problème.
+
+### Piste retenue pour la reprise
+
+**Virtual HID Driver de LizardByte** prend en charge un clavier et une souris virtuels
+visibles via Raw Input, en plus des manettes. Il s’installe sur **Lovecaft**, tandis que
+Denise conserve Moonlight et ses périphériques habituels. Il ne convertit pas les touches
+en commandes de manette. Une licence active est requise pour ce chemin clavier/souris.
+La compatibilité spécifique avec Aion 2 global Steam n’a pas été confirmée officiellement.
+
+Documentation officielle consultée le 6 octobre 2026, à revérifier avant installation :
+
+- [Sunshine : pilote, licence et entrées clavier/souris](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html#no-gamepad-detected)
+- [Sunshine : jeux ne recevant pas le clavier](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html#games-do-not-detect-keyboard-input)
+- [Sunshine : jeux ne recevant pas la souris](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html#games-do-not-detect-mouse-input)
+- [libvirtualhid : pilote Windows](https://docs.lizardbyte.dev/projects/libvirtualhid/latest/md_docs_2windows-driver.html)
+
+### Marche à suivre sur Lovecaft
+
+1. Identifier Windows, vérifier `git status`, puis faire `git pull --ff-only` avec
+   un arbre propre. Lire ce guide et STATUS.md. Préserver les changements locaux.
+2. Exécuter le diagnostic Windows ci-dessous en lecture seule. Inspecter les versions
+   actuelles de Sunshine, les pilotes installés et l’état des services avant toute installation.
+   Le dernier relevé date du 27 septembre : Sunshine 2026.914.233613,
+   `gamepad_driver = vigembus`, aucun pilote virtuel installé à cette date.
+3. Ouvrir l’administration Sunshine **sur le PC**, selon la procédure en tête du guide.
+   Relever Configuration → Input et la page de dépannage : pilote, licence et erreurs
+   éventuelles. Conserver toute sauvegarde de configuration et tout journal sous `.local/`.
+4. Vérifier les versions stables compatibles depuis la documentation officielle et son lien
+   de téléchargement Virtual HID. Au 6 octobre, la documentation Sunshine annonce le pilote
+   2026.914.1218.10 ou plus récent ; vérifier aussi la compatibilité avec la version Sunshine
+   réellement installée. Ne pas prendre une préversion par défaut ni compiler un pilote de test.
+5. Vérifier les conditions de licence et l’existence éventuelle d’un essai officiel avant
+   tout achat. Aucun achat n’est autorisé par la seule demande de préparer cette reprise.
+   L’utilisateur effectue les connexions de compte et les validations Windows nécessaires.
+6. Installer le paquet Windows officiel compatible après vérification de sa provenance et
+   de sa signature, puis activer une licence valable. Ne pas installer de pilote sur le Mac.
+   La documentation recommande un redémarrage après installation : l’organiser avec
+   un accès local permettant de récupérer le PC, la reprise après redémarrage restant non testée.
+7. Dans Configuration → Input, remplacer « ViGEmBus uniquement » par une option permettant
+   Virtual HID (« All Available Drivers » ou « Virtual HID Driver » selon l’interface),
+   enregistrer, puis vérifier dans le dépannage que le pilote et la licence sont reconnus.
+   La sélection d’un pilote ne prouve pas que le clavier/souris l’utilise : vérifier les
+   diagnostics locaux pour écarter un repli sur SendInput. La documentation indique que
+   l’activation de licence peut recréer les périphériques sans redémarrer Sunshine.
+8. Depuis Denise, tester d’abord le bureau et le Bloc-notes, puis Aion 2 : menu Échap,
+   clics, déplacement, actions et saisie dans le chat sans envoyer de message de test.
+   Vérifier le mode souris adapté aux jeux : les mouvements relatifs, boutons et molette
+   peuvent passer par HID ; le positionnement absolu reste injecté selon la documentation.
+9. Consigner les versions, le réglage retenu et les résultats réels dans STATUS.md.
+   Si le jeu reste bloqué, conserver la cause comme non confirmée et consulter les supports
+   officiels avec des informations expurgées. Ne pas désactiver ni contourner l’anti-triche.
+
+Pour revenir aux réglages antérieurs en cas de régression, utiliser l’accès local et
+rétablir le choix d’entrée précédemment relevé. Ne pas désinstaller Sunshine/Tailscale
+ni supprimer l’association Moonlight. Garder UPnP désactivé et l’administration locale.
+
 ## 1. Diagnostic
 
 Depuis la racine du dépôt, dans PowerShell :
