@@ -9,10 +9,12 @@
 - Ports TCP Sunshine 47989, 47984 et 48010 accessibles depuis Denise.
 - Moonlight ouvert et processus présent ; utilisateur invité à sélectionner Lovecaft,
   puis Desktop / Bureau avec l'association existante.
-- Affichage et commandes de cette session distante en attente de confirmation.
-  Le réseau d'accès exact (partage 5G ou autre) n'a pas été vérifié.
-- Prochaine action : confirmer le bureau Windows et les commandes, puis relever
-  le profil et la qualité pendant une vraie session distante.
+- Bureau Windows affiché et contrôle au clavier et à la souris confirmés par
+  l’utilisateur dans Moonlight : première prise de contrôle en déplacement validée.
+- Le réseau d’accès exact (partage 5G ou autre) n’a pas été vérifié. Son, profil,
+  durée, fluidité et fonctionnement en jeu restent à relever.
+- Prochaine action : vérifier le son et la qualité pendant une session de jeu,
+  puis confirmer le réseau utilisé et le profil Moonlight.
 
 ## État actuel de Denise — 27 septembre 2026
 
@@ -96,6 +98,7 @@ Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 - [x] Installer Tailscale et connecter Lovecaft au compte de l'utilisateur.
 - [x] Installer Moonlight et Tailscale sur Denise ; connecter le même réseau Tailscale.
 - [x] Associer Moonlight à Sunshine ; premier fonctionnement confirmé par l'utilisateur.
+- [x] Afficher le bureau et contrôler Lovecaft dans Moonlight en déplacement.
 - [ ] Valider en détail une session sur le réseau local (image, son, commandes, qualité).
 - [x] Vérifier une liaison Tailscale directe depuis Denise sur la connexion actuelle.
 - [ ] Valider une liaison Tailscale directe et une session via le partage 5G.
@@ -104,10 +107,11 @@ Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 
 ## Prochaine action
 
-Sur **Denise**, rouvrir Moonlight et sélectionner le PC déjà associé. Vérifier le profil
-1080p/60/15 Mbit/s SDR, puis suivre docs/VALIDATION.md : image, son, clavier/souris et
-qualité sur le réseau domestique, puis session de 15 à 30 minutes via le partage 5G.
-Tester ensuite écran éteint et reprise après redémarrage, puis le jeu.
+La prise de contrôle en déplacement est confirmée. Pendant la session sur **Denise**,
+vérifier le son et tester un jeu ; relever le profil Moonlight et la qualité sur
+15 à 30 minutes. Confirmer si le Mac utilise le partage 5G de l’iPhone.
+Le profil prévu reste 1080p/60/15 Mbit/s SDR. Les essais détaillés sur le réseau
+domestique, écran éteint et après redémarrage restent à organiser selon docs/VALIDATION.md.
 L'appairage est réalisé ; ne pas le recommencer sauf si Moonlight le demande.
 L'interface Sunshine reste accessible uniquement depuis Lovecaft.
 
