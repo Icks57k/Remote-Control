@@ -56,6 +56,8 @@
 
 ## Accès en déplacement — 6 octobre 2026
 
+- À la demande de l’utilisateur, Moonlight a été fermé puis rouvert sur Denise ;
+  présence du processus confirmée. Aucune reconnexion ni validation en jeu déduite de ce redémarrage.
 - Utilisateur en déplacement ; intervention depuis macOS (Denise).
 - Arbre Git propre avant synchronisation ; `git pull --ff-only` effectué, dépôt à jour.
 - Tailscale actif (`Running`) ; Lovecaft annoncé en ligne.
