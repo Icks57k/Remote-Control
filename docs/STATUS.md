@@ -1,5 +1,17 @@
 # État du projet
 
+## Retour utilisateur et icône Tailscale — 6 octobre 2026
+
+- Après activation Virtual HID et demande de test depuis Denise, l’utilisateur rapporte
+  « tout a fonctionné ». Succès global de l’essai confirmé par l’utilisateur ; les commandes
+  d’Aion 2, la durée et le réseau utilisés n’ont pas été détaillés séparément.
+- L’utilisateur signale la disparition de l’icône du second outil de contrôle à distance.
+  SunshineService, Tailscale et libvirtualhid_broker vérifiés actifs et automatiques.
+- Tailscale vérifié `Running`, poste en ligne. Processus de l’interface `tailscale-ipn`
+  absent lors du relevé ; interface relancée sans redémarrer le service réseau.
+- Prochaine action : confirmer le retour de l’icône et préciser les résultats en jeu ;
+  les validations détaillées de durée, réseau 5G et reprise après redémarrage restent à faire.
+
 ## Activation Virtual HID vérifiée — 6 octobre 2026
 
 - Activation effectuée par l’utilisateur ; API locale Sunshine : `state = licensed`,
