@@ -1,5 +1,19 @@
 # État du projet
 
+## Accès en déplacement — 6 octobre 2026
+
+- Utilisateur en déplacement ; intervention depuis macOS (Denise).
+- Arbre Git propre avant synchronisation ; `git pull --ff-only` effectué, dépôt à jour.
+- Tailscale actif (`Running`) ; Lovecaft annoncé en ligne.
+- Ping Tailscale réussi en liaison directe, 34 ms sur la mesure effectuée.
+- Ports TCP Sunshine 47989, 47984 et 48010 accessibles depuis Denise.
+- Moonlight ouvert et processus présent ; utilisateur invité à sélectionner Lovecaft,
+  puis Desktop / Bureau avec l'association existante.
+- Affichage et commandes de cette session distante en attente de confirmation.
+  Le réseau d'accès exact (partage 5G ou autre) n'a pas été vérifié.
+- Prochaine action : confirmer le bureau Windows et les commandes, puis relever
+  le profil et la qualité pendant une vraie session distante.
+
 ## État actuel de Denise — 27 septembre 2026
 
 - Dépôt cloné en HTTPS sur `main`. Authentification SSH GitHub fonctionnelle ;
