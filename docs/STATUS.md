@@ -1,5 +1,13 @@
 # État du projet
 
+## Synchronisation Windows — 6 octobre 2026
+
+- Système courant vérifié : Windows, version 10.0.22631.
+- Arbre Git propre avant synchronisation ; `git pull --ff-only` réussi jusqu’au commit `478dcb7`.
+- Dernières notes de Denise et guide de reprise Aion 2 / Virtual HID récupérés.
+- Aucun diagnostic de streaming ni changement de configuration effectué pendant cette reprise.
+- Prochaine action : suivre la reprise Lovecaft décrite ci-dessous, en inspectant l’existant.
+
 ## Accès en déplacement — 6 octobre 2026
 
 - Utilisateur en déplacement ; intervention depuis macOS (Denise).
