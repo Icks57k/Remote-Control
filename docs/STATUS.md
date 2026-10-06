@@ -13,8 +13,11 @@
   l’utilisateur dans Moonlight : première prise de contrôle en déplacement validée.
 - Le réseau d’accès exact (partage 5G ou autre) n’a pas été vérifié. Son, profil,
   durée, fluidité et fonctionnement en jeu restent à relever.
-- Prochaine action : vérifier le son et la qualité pendant une session de jeu,
-  puis confirmer le réseau utilisé et le profil Moonlight.
+- Aion 2 se lance selon l’utilisateur, mais seule la caméra peut être déplacée ;
+  les autres actions ne fonctionnent pas. Jouabilité non validée. Cause non déterminée.
+- Prochaine action : distinguer un problème de focus, de clavier/clics ou de
+  compatibilité des entrées du jeu ; tester Échap, Entrée et un bouton du menu.
+  Confirmer ensuite le réseau utilisé, le son et le profil Moonlight.
 
 ## État actuel de Denise — 27 septembre 2026
 
@@ -107,8 +110,9 @@ Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 
 ## Prochaine action
 
-La prise de contrôle en déplacement est confirmée. Pendant la session sur **Denise**,
-vérifier le son et tester un jeu ; relever le profil Moonlight et la qualité sur
+La prise de contrôle du bureau en déplacement est confirmée, mais les commandes dans
+Aion 2 bloquent, sauf le mouvement de caméra. Diagnostiquer les entrées du jeu avant
+de valider la jouabilité. Vérifier ensuite le son, le profil Moonlight et la qualité sur
 15 à 30 minutes. Confirmer si le Mac utilise le partage 5G de l’iPhone.
 Le profil prévu reste 1080p/60/15 Mbit/s SDR. Les essais détaillés sur le réseau
 domestique, écran éteint et après redémarrage restent à organiser selon docs/VALIDATION.md.
