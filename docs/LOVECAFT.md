@@ -24,14 +24,16 @@ Pour rétablir le délai de veille initial sur secteur, exécuter `powercfg /cha
 Laisser la veille désactivée pendant les périodes où l'accès distant doit rester disponible.
 
 Le premier usage vise clavier/souris. Virtual HID 2026.914.1218.10 est maintenant installé
-et sélectionné dans Sunshine ; son activation par licence et la validation en jeu restent à faire.
+et sélectionné dans Sunshine ; licence active, clavier et souris HID présents en état OK.
+La réception des commandes depuis Moonlight et la validation en jeu restent à faire.
 ViGEmBus n’est pas installé. Voir le dernier relevé dans STATUS.md.
 
 ## Reprise prioritaire : Aion 2 et Virtual HID — 6 octobre 2026
 
 Procédure initialement rédigée sur Denise, puis exécutée en partie sous Windows le 6 octobre :
-pilote installé et reconnu compatible, choix Virtual HID enregistré ; licence non activée
-et fonctionnement clavier/souris HID non validé. Voir STATUS.md avant de reprendre les étapes.
+pilote installé et reconnu compatible, choix Virtual HID enregistré, licence activée,
+clavier et souris HID détectés ; fonctionnement en jeu non validé.
+Voir STATUS.md avant de reprendre les étapes.
 Le jeu est **Aion 2, version globale lancée via Steam**, joué au **clavier et à la souris**.
 Aucune manette n’est demandée.
 

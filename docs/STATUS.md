@@ -1,5 +1,20 @@
 # État du projet
 
+## Activation Virtual HID vérifiée — 6 octobre 2026
+
+- Activation effectuée par l’utilisateur ; API locale Sunshine : `state = licensed`,
+  `licensed = true`, aucune erreur retournée. Aucune clé lue ni versionnée.
+- Pilote 2026.914.1218.10 installé et compatible selon Sunshine ; services SunshineService
+  et libvirtualhid_broker actifs. Choix `gamepad_driver = virtualhid` relu.
+- Windows énumère un clavier et une souris présents, état `OK`, dont la chaîne de parents
+  remonte à LIBVIRTUALHID. Cela confirme la création des périphériques HID, pas encore
+  la réception effective des commandes Moonlight dans le jeu.
+- UPnP désactivé et administration limitée au PC, vérifiés de nouveau.
+- Aucun redémarrage Windows ni test Moonlight effectué par l’assistant pendant cette étape.
+- Prochaine action : depuis Denise, reconnecter Moonlight, tester la saisie et les clics
+  dans le Bloc-notes, puis Échap, clics, déplacement et actions dans Aion 2.
+  Consigner le résultat utilisateur ; le problème du jeu reste non déclaré résolu.
+
 ## Préparation Virtual HID sur Windows — 6 octobre 2026
 
 - Diagnostic Windows exécuté en lecture seule : Windows 11 Famille 10.0.22631,
