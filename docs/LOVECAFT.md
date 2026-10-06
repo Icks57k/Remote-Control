@@ -23,13 +23,15 @@ Les réglages d'alimentation d'origine sont relevés dans `.local/power-before.t
 Pour rétablir le délai de veille initial sur secteur, exécuter `powercfg /change standby-timeout-ac 15`.
 Laisser la veille désactivée pendant les périodes où l'accès distant doit rester disponible.
 
-Le premier usage vise clavier/souris. Aucun pilote de manette virtuelle n'a été installé.
-Ne pas confondre le choix `vigembus` enregistré dans Sunshine avec la présence de ce pilote.
+Le premier usage vise clavier/souris. Virtual HID 2026.914.1218.10 est maintenant installé
+et sélectionné dans Sunshine ; son activation par licence et la validation en jeu restent à faire.
+ViGEmBus n’est pas installé. Voir le dernier relevé dans STATUS.md.
 
 ## Reprise prioritaire : Aion 2 et Virtual HID — 6 octobre 2026
 
-L’utilisateur passe côté PC pour préparer cette piste. Cette procédure est rédigée
-sur Denise ; aucune installation ni validation Windows de Virtual HID n’a été faite.
+Procédure initialement rédigée sur Denise, puis exécutée en partie sous Windows le 6 octobre :
+pilote installé et reconnu compatible, choix Virtual HID enregistré ; licence non activée
+et fonctionnement clavier/souris HID non validé. Voir STATUS.md avant de reprendre les étapes.
 Le jeu est **Aion 2, version globale lancée via Steam**, joué au **clavier et à la souris**.
 Aucune manette n’est demandée.
 

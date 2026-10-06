@@ -1,5 +1,36 @@
 # État du projet
 
+## Préparation Virtual HID sur Windows — 6 octobre 2026
+
+- Diagnostic Windows exécuté en lecture seule : Windows 11 Famille 10.0.22631,
+  RTX 5070, Sunshine 2026.914.233613 et Tailscale 1.102.4.
+- SunshineService trouvé arrêté (démarrage automatique) ; Tailscale actif.
+  Veille sur secteur toujours désactivée. Cause de l’arrêt Sunshine non déterminée.
+- Aucun périphérique ROOT\LIBVIRTUALHID ni service Virtual HID détecté.
+  Le périphérique Microsoft Virtual HID Framework ne prouve pas l’installation LizardByte.
+- Réglages relus : `gamepad_driver = vigembus`, UPnP désactivé, administration limitée au PC.
+- Installateur stable Virtual HID v2026.914.1218.10 téléchargé depuis la release officielle
+  sous `.local/`. Signature Authenticode valide (David Lane) et SHA-256 conforme au
+  digest GitHub. La release recommande Sunshine v2026.914.233613 ou ultérieur, déjà installé.
+- La documentation du tag publié confirme la prise en charge clavier/souris HID avec licence.
+  Utilisateur sans licence pour le moment ; aucun achat ni activation effectué.
+- Boutique officielle consultée : 14,99 USD/an (abonnement) ou 49,99 USD à vie,
+  cinq machines ; taxes au paiement. Aucun essai grand public trouvé.
+  Source : https://app.lizardbyte.dev/store/
+- Démarrage direct de Sunshine refusé faute de droits administrateur, puis demande UAC
+  validée par l’utilisateur : service démarré. Assistant MSI lancé sans redémarrage automatique.
+- Installation vérifiée par l’API Sunshine : pilote 2026.914.1218.10 présent et compatible ;
+  service `libvirtualhid_broker` actif. Licence indiquée `unlicensed`.
+- Configuration sauvegardée sous `.local/`, puis `gamepad_driver = virtualhid` enregistré
+  via l’API locale. UPnP désactivé et administration limitée au PC, relus après modification.
+- Redémarrage Sunshine demandé par son API ; connexion fermée pendant l’appel, puis service
+  actif et API de configuration à nouveau accessibles avec le nouveau choix d’entrée.
+- Page locale de dépannage ouverte pour l’activation par l’utilisateur. Windows non redémarré ;
+  aucun clavier/souris HID actif ni résultat dans Aion 2 validé à ce stade.
+- Prochaine action : l’utilisateur choisit et active une licence dans Sunshine (clé privée),
+  puis vérifier le chemin HID et tester depuis Denise. Redémarrage Windows recommandé par
+  la documentation, à organiser avec présence locale. Aucun achat effectué par l’assistant.
+
 ## Synchronisation Windows — 6 octobre 2026
 
 - Système courant vérifié : Windows, version 10.0.22631.
