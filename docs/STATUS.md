@@ -56,6 +56,8 @@
 
 ## Accès en déplacement — 6 octobre 2026
 
+- Moonlight ensuite fermé à la demande de l’utilisateur sur Denise ; absence
+  du processus vérifiée. Aucun arrêt du PC ni du service Sunshine demandé.
 - À la demande de l’utilisateur, Moonlight a été fermé puis rouvert sur Denise ;
   présence du processus confirmée. Aucune reconnexion ni validation en jeu déduite de ce redémarrage.
 - Utilisateur en déplacement ; intervention depuis macOS (Denise).
