@@ -19,11 +19,16 @@
 - Préférences d’entrée Moonlight consultées en lecture seule sur Denise :
   `capturesyskeys = 0` (capture des raccourcis système désactivée, vérifiée dans
   le code officiel Moonlight 6.1.0). Aucun réglage modifié ni pilote installé.
-- L’utilisateur indique qu’Alt+Tab le ramène au Mac ; le test dans une autre
-  fenêtre Windows n’est donc pas encore réalisé. Essai proposé : Ctrl+Échap
-  dans le flux Moonlight pour ouvrir Démarrer, puis le Bloc-notes.
-- Prochaine action : tester clics et saisie dans Windows en laissant Aion 2 ouvert
-  pour distinguer un blocage propre au jeu d’un problème général de capture.
+- Alt+Tab ramenait l’utilisateur au Mac. Ctrl+Échap a ensuite ouvert Démarrer
+  dans Windows ; clics et saisie dans le Bloc-notes confirmés avec Aion 2 ouvert.
+- Retour dans Aion 2 par son icône dans la barre des tâches : Échap ne répond
+  toujours pas. Le simple retour au premier plan n’a pas corrigé le problème.
+- Le blocage constaté est propre au jeu ; sa cause technique exacte reste
+  non confirmée. Aucune modification de l’anti-triche effectuée.
+- Lanceur et région confirmés : Steam, version globale d’Aion 2.
+- Prochain essai proposé par l’utilisateur : ouvrir l’entrée Steam de Moonlight
+  au lieu de Desktop, puis accéder au jeu. Résultat en attente ; cette entrée
+  reste un flux Sunshine/Moonlight et ne constitue pas Steam Remote Play.
 - La documentation Sunshine décrit des jeux qui ne reçoivent pas les entrées
   SendInput et nécessitent Raw Input ; piste de compatibilité à confirmer ici,
   sans conclusion sur l’anti-triche ni garantie de correction par un pilote.
@@ -117,13 +122,16 @@ Le matériel de Denise a été inspecté sur place (voir ci-dessus).
 - [x] Vérifier une liaison Tailscale directe depuis Denise sur la connexion actuelle.
 - [ ] Valider une liaison Tailscale directe et une session via le partage 5G.
 - [ ] Valider écran éteint, veille désactivée et reprise après redémarrage.
-- [ ] Tester Aion 2 quand le jeu est disponible pour l'utilisateur.
+- [ ] Valider la jouabilité d’Aion 2 : lancement réussi, commandes bloquées au test du 6 octobre.
 
 ## Prochaine action
 
 La prise de contrôle du bureau en déplacement est confirmée, mais les commandes dans
-Aion 2 bloquent, sauf le mouvement de caméra. Diagnostiquer les entrées du jeu avant
-de valider la jouabilité. Vérifier ensuite le son, le profil Moonlight et la qualité sur
+Aion 2 bloquent, sauf le mouvement de caméra. Le Bloc-notes répond même lorsque
+le jeu est ouvert, et revenir au premier plan dans le jeu ne corrige rien.
+Version Steam globale confirmée. Essayer l’entrée Steam de Moonlight, puis
+rechercher une solution officiellement prise en charge si le blocage persiste ;
+aucun correctif validé à ce stade. Vérifier ensuite le son, le profil Moonlight et la qualité sur
 15 à 30 minutes. Confirmer si le Mac utilise le partage 5G de l’iPhone.
 Le profil prévu reste 1080p/60/15 Mbit/s SDR. Les essais détaillés sur le réseau
 domestique, écran éteint et après redémarrage restent à organiser selon docs/VALIDATION.md.
