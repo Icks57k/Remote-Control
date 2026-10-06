@@ -15,9 +15,20 @@
   durée, fluidité et fonctionnement en jeu restent à relever.
 - Aion 2 se lance selon l’utilisateur, mais seule la caméra peut être déplacée ;
   les autres actions ne fonctionnent pas. Jouabilité non validée. Cause non déterminée.
-- Prochaine action : distinguer un problème de focus, de clavier/clics ou de
-  compatibilité des entrées du jeu ; tester Échap, Entrée et un bouton du menu.
-  Confirmer ensuite le réseau utilisé, le son et le profil Moonlight.
+- Test utilisateur dans Aion 2 : ni Échap, ni Entrée, ni les clics ne répondent.
+- Préférences d’entrée Moonlight consultées en lecture seule sur Denise :
+  `capturesyskeys = 0` (capture des raccourcis système désactivée, vérifiée dans
+  le code officiel Moonlight 6.1.0). Aucun réglage modifié ni pilote installé.
+- L’utilisateur indique qu’Alt+Tab le ramène au Mac ; le test dans une autre
+  fenêtre Windows n’est donc pas encore réalisé. Essai proposé : Ctrl+Échap
+  dans le flux Moonlight pour ouvrir Démarrer, puis le Bloc-notes.
+- Prochaine action : tester clics et saisie dans Windows en laissant Aion 2 ouvert
+  pour distinguer un blocage propre au jeu d’un problème général de capture.
+- La documentation Sunshine décrit des jeux qui ne reçoivent pas les entrées
+  SendInput et nécessitent Raw Input ; piste de compatibilité à confirmer ici,
+  sans conclusion sur l’anti-triche ni garantie de correction par un pilote.
+  Source : https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html
+- Confirmer ensuite le réseau utilisé, le son et le profil Moonlight.
 
 ## État actuel de Denise — 27 septembre 2026
 
