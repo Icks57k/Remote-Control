@@ -1,5 +1,12 @@
 # État du projet
 
+## Ouverture sur Denise — 7 octobre 2026
+
+- Moonlight lancé à la demande de l’utilisateur sur macOS ; processus présent vérifié.
+- Aucun test réseau ou streaming effectué pendant cette ouverture.
+- Prochaine action : sélectionner Lovecaft dans Moonlight et tester les commandes
+  dans le bureau puis Aion 2 après l’activation Virtual HID consignée ci-dessous.
+
 ## Retour utilisateur et icône Tailscale — 6 octobre 2026
 
 - Après activation Virtual HID et demande de test depuis Denise, l’utilisateur rapporte
